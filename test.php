@@ -18,8 +18,10 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="datavis.html">Data visualize</a></li>
-        <li><a href="#">Page 2</a></li>
       </ul>
+      <form>
+        <button class="btn btn-danger navbar-btn" onclick="window.location.href='add.php'">Add</button>
+      </form>
     </div>
   </nav>
 
@@ -49,4 +51,6 @@
 </div>
 
 </body>
+
+
 </html>

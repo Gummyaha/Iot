@@ -18,17 +18,21 @@
       <ul class="nav navbar-nav">
         <li><a href="test.html">Home</a></li>
         <li class="active"><a href="#">Data visualize</a></li>
-        <li><a href="#">Page 2</a></li>
       </ul>
+      <button class="btn btn-danger navbar-btn">Add</button>
     </div>
   </nav>
 
-  <div class="Topic" style="margin-top: 3%">
-      <h1> Data visualize page </h1>
+  <div class="topics" style="margin-top: 7%">
+    <h2 align="center">Internet of Things Data Visualization</h2>
+    <p align="center">powered by IoT Laboratory <p>
   </div>
+  <div><canvas id="mychart" width="700" height="450"></canvas></div>
+
 </body>
 
-<script>
+
+<!-- <script>
 
 var path, dataset=[], timeset=[];
 var chart_canvas = document.getElementById('mychart').getContext('2d');
@@ -127,6 +131,6 @@ function re_numbering(_arr){
   }
   return _dummy_arr;
 }
-</script>
+</script> //-->
 
 </html>
