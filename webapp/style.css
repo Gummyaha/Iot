@@ -3,6 +3,10 @@ body {
   text-align: center;
 }
 
+.test h1{
+  font-family: Helvetica Neue, Arial, sans-serif;
+}
+
 .wrapper {
   max-width: 800px;
   margin: 50px auto;

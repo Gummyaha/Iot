@@ -1,50 +1,38 @@
-var years = [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050];
-// For drawing the lines
-var africa = [86,114,106,106,107,111,133,221,783,2478];
-var asia = [282,350,411,502,635,809,947,1402,3700,5267];
-var europe = [168,170,178,190,203,276,408,547,675,734];
-var latinAmerica = [40,20,10,16,24,38,74,167,508,784];
-var northAmerica = [6,3,2,2,7,26,82,172,312,433];
-
-data = {
-    datasets: [{
-        data: [10, 20, 30]
-    }],
-
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-        'Red',
-        'Yellow',
-        'Blue'
-    ]
-};
-
-
-window.onload = function(){
-
-
+test_chart  = function(){
     var ctx = document.getElementById("myChart");
     var mixedChart = new Chart(ctx, {
       type: 'line',
       data: {
         datasets: [{
               label: 'Entrance Dataset',
-              data: [10, 20, 30, 40]
+              data: statisticEntrance_data,
+              borderColor: "#ff999a",
+              backgroundColor: "rgba(250,128,114,0.2)",
             }, {
               label: 'Exit Dataset',
-              data: [30, 50, 10, 40],
-
-              // Changes this dataset to become a line
-              type: 'line'
+              data: statisticExit_data,
+              borderColor: "#87cefa",
+              backgroundColor: "rgba(0,191,255,0.2)",
             }],
-        labels: ['7.00 AM', '8.00 AM', '9.00 AM', '10.00 AM']
+        labels: ['0.00 AM', '2.00 AM','3.00 AM','4.00 AM','5.00 AM','6.00 AM', '7.00 AM', '8.00 AM', '9.00 AM', '10.00 AM','11.00 AM', '12.00 PM',
+                '1.00 PM','2.00 PM','3.00 PM','4.00 PM','5.00 PM','6.00 PM','7.00 PM','8.00 PM','9.00 PM','10.00 PM','11.00 PM']
       }
     });
+}
 
+pie_chart  = function(){
     var ctx3 = document.getElementById("myChart3");
     var myPieChart = new Chart(ctx3,{
     type: 'pie',
-    data: data,
+    data: {
+      datasets: [{
+            label: ['Staff',
+                  'Visitor'],
+            data: statisticUser_data,
+            backgroundColor: ['#66cdaa','#FFFF7F']
+          }],
+      labels: ['Staffs', 'Visitors']
+    }
 
     });
 }
